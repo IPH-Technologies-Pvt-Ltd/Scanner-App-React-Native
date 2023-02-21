@@ -26,23 +26,36 @@ react-native-camera
 react-native-qrcode-scanner
 react-navigation
 
-#Installation
+# Installation
 
-1. Install dependencies:
+1.Install dependencies:
 
-cd qr-scanner-react-native
-npm install
+    cd qr-scanner-react-native
+    npm install
 
 2.Run the app:
 
-npm start
+    npm start
 
 # Contributing
-If you want to contribute to this project, follow these steps:
+ If you want to contribute to this project, follow these steps:
 
-Fork the repository
-Create a new branch using the command git checkout -b your-feature
-Make your changes and commit them using the command git commit -m "your-message"
-Push your changes to your fork using the command git push origin your-feature
-Open a pull request
-If you find any issues or have any suggestions for the app, feel free to open an issue or submit a pull request.
+ Fork the repository
+ Create a new branch using the command git checkout -b your-feature
+ Make your changes and commit them using the command git commit -m "your-message"
+ Push your changes to your fork using the command git push origin your-feature
+ Open a pull request
+ If you find any issues or have any suggestions for the app, feel free to open an issue or submit a pull request.
+
+# License
+ This project is licensed under the MIT License. See the LICENSE file for more information.
+
+# Acknowledgments
+ This app was built using the following resources:
+
+# React Native Documentation
+ Expo Documentation
+ react-native-camera Documentation
+ react-native-qrcode-scanner Documentation
+ react-navigation Documentation
+
