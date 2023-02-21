@@ -12,19 +12,19 @@ Open the Expo app on your device and scan the QR code to view the app
 # Features
 This app includes the following features:
 
-Scan QR codes and barcodes using the device's camera
-Automatically detect and decode different types of barcodes and QR codes
-View a history of previously scanned codes
-Copy scanned codes to the device's clipboard for easy sharing
+ Scan QR codes and barcodes using the device's camera
+ Automatically detect and decode different types of barcodes and QR codes
+ View a history of previously scanned codes
+ Copy scanned codes to the device's clipboard for easy sharing
 
 # Technologies Used
-This app was built using the following technologies:
+ This app was built using the following technologies:
 
-React Native
-Expo
-react-native-camera
-react-native-qrcode-scanner
-react-navigation
+ React Native
+ Expo
+ react-native-camera
+ react-native-qrcode-scanner
+ react-navigation
 
 # Installation
 
