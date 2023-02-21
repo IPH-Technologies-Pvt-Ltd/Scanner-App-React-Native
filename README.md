@@ -3,7 +3,7 @@
 # Getting Started
 To get started with this project, follow these steps:
 
- - Clone the repository using the command git clone https://github.com/IPH-Technologies-Pvt-Ltd/qr-scanner-react-native.git
+ - Clone the repository using the command git clone https://github.com/IPH-Technologies-Pvt-Ltd/Scanner-App-React-Native.git
  - Navigate to the project directory using the command cd your-repo
  - Install the dependencies using the command npm install
  - Start the development server using the command npm start
