@@ -59,4 +59,7 @@ This app includes the following features:
  -react-native-qrcode-scanner Documentation
  -react-navigation Documentation
 
-#Screenshots
+# Screenshots
+<img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=DOWNLOAD_URL&attachment_token=AMzByC1Fkz4HUqZwALl94KPLB80q5bORUp1H1weaOiuFbt8n6Cc7IByFK9pFCVCgh7%2B9HoPCkpsp2xTx3tOhN0tD8VAOThnrMeSTdpA12id95Xoqbi3xGQEhk%2FiWKUMl4NFyPeUJpKku5GftzArrX1bc6RPt5jC0bBl1TmJOPUCJpje5KNB7nbteOxpSRERhA30x26aDkPFvE3kaLKWBZrdlVbSSzsGAj9T9rkdyOhso16iflf57Z8%2FrsRCT9pCwNAR5%2BWjoso6BE3AeYyAChiyrfWC4%2FbVY%2BHakoOPyQv1AwZnb%2FyVp%2Fs02Hk9icX1R4H9e5tMeqkSvuWXufdJYErw%2FaRhhhZJ6aAIWGwRYnUOIKjbrKthq22MR%2FvpujYbYFy%2FjY8hbC67NJ6K5%2FLcIBb1pWpGKRLeETsyVouZESkWKLS6G36N%2F07t9RQf%2FciM20WkTVS6%2FJmlam77DA8MlgE8XIhzrcfrpDXaNxSPityPiMZBnPjyucS5ClDLPNun71SthLx3a%2BiJUu6RbAgHcv2LzBQboaJV64hIiqhkbUfe3JOXmDllgiS2LwLCga%2F5Aaxp9qJi%2FOM5g6yfXp3hymoekZuxcQjgXY0W9BiEUTBLh&content_type=image%2Fgif&auto=true" 
+     width="200" 
+     height="400"/>
