@@ -60,6 +60,6 @@ This app includes the following features:
  -react-navigation Documentation
 
 # Screenshots
-<img src="https://user-images.githubusercontent.com/124572978/219281494-57d3d6c3-9eec-4fdb-9737-a701dc5fdabe.gif" 
+<img src="Uploading Screenrecorder-2023-02-21-11-33-04-0(0).mp4…" 
      width="200" 
      height="400"/>
