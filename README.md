@@ -54,10 +54,10 @@ This app includes the following features:
  This app was built using the following resources:
 
 # React Native Documentation
- -Expo Documentation
- -react-native-camera Documentation
- -react-native-qrcode-scanner Documentation
- -react-navigation Documentation
+ - Expo Documentation
+ - react-native-camera Documentation
+ - react-native-qrcode-scanner Documentation
+ - react-navigation Documentation
 
 
 
