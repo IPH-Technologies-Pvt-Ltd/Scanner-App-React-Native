@@ -30,7 +30,7 @@ This app includes the following features:
 
 1.Install dependencies:
 
-    cd qr-scanner-react-native
+    cd Scanner-App-React_Native
     npm install
 
 2.Run the app:
