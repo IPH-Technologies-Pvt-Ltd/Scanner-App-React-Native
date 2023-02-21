@@ -59,7 +59,11 @@ This app includes the following features:
  -react-native-qrcode-scanner Documentation
  -react-navigation Documentation
 
+
+
+
+
 # Screenshots
-<img src="Uploading Screenrecorder-2023-02-21-11-33-04-0(0).mp4…" 
+<img src="https://user-images.githubusercontent.com/124868842/220314306-d1142102-fc28-47dd-b159-3ea7a5982538.mp4" 
      width="200" 
      height="400"/>
