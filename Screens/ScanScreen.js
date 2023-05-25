@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Text, View, StyleSheet, TouchableOpacity,Alert,ToastAndroid } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Alert,
+  ToastAndroid,
+} from "react-native";
 import { BarCodeScanner } from "expo-barcode-scanner";
 import { DataTable } from "react-native-paper";
 import { ScrollView } from "react-native-gesture-handler";
@@ -7,8 +14,8 @@ import { useNavigation } from "@react-navigation/native";
 import { Dimensions } from "react-native";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
-import * as Clipboard from 'expo-clipboard';
-import { Button } from 'react-native-elements';
+import * as Clipboard from "expo-clipboard";
+import { Button } from "react-native-elements";
 
 export default function App() {
   const navigation = useNavigation();
@@ -19,19 +26,16 @@ export default function App() {
   const [date, setDate] = useState(new Date().toLocaleTimeString());
   const [history, setHistory] = useState([]);
 
-
   const askForCameraPermission = () => {
     (async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
       setHasPermission(status === "granted");
     })();
   };
-  
+
   const copyToClipboard = async () => {
     await Clipboard.setStringAsync(text);
-    
-    ToastAndroid.show('Text is copied', ToastAndroid.SHORT);
-
+    ToastAndroid.show("Text is copied", ToastAndroid.SHORT);
   };
 
   useEffect(() => {
@@ -43,8 +47,6 @@ export default function App() {
     setText(data);
     setType(type);
     setDate(new Date().toLocaleTimeString());
-    console.log("Type: " + type + "\nData: " + data);
-
     setHistory([...history, { data: data, date: date, type: type }]);
   };
 
@@ -55,108 +57,144 @@ export default function App() {
       </View>
     );
   }
+
   if (hasPermission === false) {
     return (
       <View style={styles.container}>
         <Text style={{ margin: 10 }}>No access to camera</Text>
-        <Button
-          title="Allow Camera"
-          onPress={() => askForCameraPermission()}
-        />
+        <Button title="Allow Camera" onPress={() => askForCameraPermission()} />
       </View>
     );
   }
 
-  return (<>
-    <ScrollView>
-      {console.log(history)}
-      <View style={styles.container}>
-        {scanned ? null : (
-          <>
-            <View style={styles.barcodebox}>
-              <BarCodeScanner
-                onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
-                style={{ height: 400, width: 400 }}
-              />
-            </View>
+  return (
+    <>
+      <ScrollView>
+        <View style={styles.container}>
+          {scanned ? null : (
+            <>
+              <View style={styles.barcodebox}>
+                <BarCodeScanner
+                  onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
+                  style={{ height: 400, width: 400 }}
+                />
+              </View>
+            </>
+          )}
+          {scanned ? (
+            <>
+              <Text style={styles.maintext1}>Type: {type}</Text>
+              <View style={{ flexDirection: "row" }}>
+                <Text style={styles.maintext}>
+                  Value: {text.split(";").join("\n")}
+                </Text>
 
-          </>
-        )}
-        {scanned ? (
-          <>
-            <Text style={styles.maintext1}>Type: {type}</Text>
-            <View style={{ flexDirection: "row" }}>
+                <Button
+                  buttonStyle={{
+                    backgroundColor: "transparent",
+                    marginLeft: 5,
+                    marginTop: 10,
+                    marginRight: 10,
+                  }}
+                  onPress={copyToClipboard}
+                  icon={{
+                    name: "copy",
+                    type: "font-awesome",
+                    size: 16,
+                    color: "#6499e3",
+                  }}
+                  size="sm"
+                  title=""
+                />
+              </View>
 
-
-              <Text style={styles.maintext}>
-                Data: {text.split(";").join("\n")}
-              </Text>
-
-
-              <Button buttonStyle={{ backgroundColor: "transparent", marginLeft: 10, marginTop: 10 }} onPress={copyToClipboard}
-                icon={{
-                  name: "copy",
-                  type: "font-awesome",
-                  size: 16,
-                  color: "#6499e3"
-                }}
-                size="sm"
-
-                title=""
-              />
-            </View>
-
-            {scanned && (
-              <TouchableOpacity
-                style={{
-                  padding: 14,
-                  backgroundColor: "tomato",
-                  borderRadius: 20,
-                  marginBottom: 20,
-                }}
-                onPress={() => setScanned(false)}
-              >
-                <Text style={{ color: "#fff", fontWeight: "bold" }}>SCAN AGAIN</Text>
-              </TouchableOpacity>
-            )}
-
-            <DataTable>
-              <DataTable.Header>
-                <DataTable.Title>Type</DataTable.Title>
-
-                <DataTable.Title>Value</DataTable.Title>
-                <DataTable.Title numeric>Time</DataTable.Title>
-              </DataTable.Header>
+              {scanned && (
+                <TouchableOpacity
+                  style={{
+                    padding: 10,
+                    backgroundColor: "tomato",
+                    borderRadius: 10,
+                    marginBottom: 15,
+                  }}
+                  onPress={() => setScanned(false)}
+                >
+                  <Text style={{ color: "#fff", fontWeight: "bold" }}>
+                    SCAN AGAIN
+                  </Text>
+                </TouchableOpacity>
+              )}
               {history.map((value, index) => {
                 return (
-                  <>
-                    <DataTable.Row >
-                      <DataTable.Cell key={index} style={{ fontWeight: "bold" }}>
-                        {value.type}
-                      </DataTable.Cell>
-                      <DataTable.Cell style={{ fontWeight: "bold" }}>
-                        {value.data}
-                      </DataTable.Cell>
-                      <DataTable.Cell numeric>{value.date}</DataTable.Cell>
-                    </DataTable.Row>
-                  </>
+                  <View
+                    style={{
+                      marginTop: 10,
+                      borderRadius: 20,
+                      elevation: 5,
+                      width: "95%",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#fff",
+                      marginBottom: 5,
+                    }}
+                  >
+                    <View style={{ width: "100%" }}>
+                      <Text
+                        style={{
+                          marginTop: 10,
+                          marginLeft: 10,
+                          fontSize: 13,
+                          fontWeight: "600",
+                        }}
+                      >
+                        Type:{" "}
+                        <Text style={{ color: "tomato" }}>{value.type}</Text>
+                      </Text>
+                      <Text
+                        style={{
+                          marginTop: 5,
+                          marginLeft: 10,
+                          fontSize: 13,
+                          fontWeight: "600",
+                        }}
+                      >
+                        Value:{" "}
+                        <Text style={{ color: "tomato" }}>{value.data}</Text>
+                      </Text>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          marginBottom: 10,
+                        }}
+                      >
+                        <Text
+                          style={{
+                            marginTop: 5,
+                            marginLeft: 10,
+                            fontSize: 13,
+                            fontWeight: "600",
+                          }}
+                        >
+                          Time:{" "}
+                          <Text style={{ color: "tomato" }}>{value.date}</Text>
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
                 );
               })}
-            </DataTable>
-          </>
-        ) : null}
-      </View>
-
-    </ScrollView>
-
-  </>
+            </>
+          ) : null}
+        </View>
+      </ScrollView>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -170,6 +208,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 50,
     fontWeight: "bold",
+    marginLeft: 20,
   },
   barcodebox: {
     alignItems: "center",
