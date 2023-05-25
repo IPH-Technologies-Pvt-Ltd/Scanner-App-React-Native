@@ -66,4 +66,4 @@ This app includes the following features:
 # Screenshots
 <img src="https://user-images.githubusercontent.com/124868842/220317303-5c694139-14fd-4e68-8d6d-e19dd8050956.gif" 
      width="400" 
-     height="600"/>
+     height="750"/>
