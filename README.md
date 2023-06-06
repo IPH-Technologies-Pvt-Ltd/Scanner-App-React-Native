@@ -60,11 +60,9 @@ This app includes the following features:
  - react-navigation Documentation
 
 
-![ezgif-4-287edcb0a8](https://github.com/IPH-Technologies-Pvt-Ltd/Scanner-App-React-Native/assets/124868842/77b0460d-e2e2-4192-a2e0-6fae816e0c53)
-)
 
 
 # Screenshots
-<img src="https://user-images.githubusercontent.com/124868842/220317303-5c694139-14fd-4e68-8d6d-e19dd8050956.gif" 
-     width="400" 
-     height="750"/>
+![ezgif-4-287edcb0a8](https://github.com/IPH-Technologies-Pvt-Ltd/Scanner-App-React-Native/assets/124868842/77b0460d-e2e2-4192-a2e0-6fae816e0c53)
+)
+
